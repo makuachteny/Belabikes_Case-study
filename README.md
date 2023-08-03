@@ -125,3 +125,12 @@ intensities %>%
 
 sleep %>
 ```
+# Visualization
+
+## Total Steps vs. Calories
+
+```{r total_steps_vs_calories}
+library(ggplot2)
+ggplot(data = activity, mapping = aes(x = TotalSteps, y = Calories)) +
+  geom_point() + geom_smooth() + labs(title = "Total Steps vs. Calories")
+
