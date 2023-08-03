@@ -133,4 +133,18 @@ sleep %>
 library(ggplot2)
 ggplot(data = activity, mapping = aes(x = TotalSteps, y = Calories)) +
   geom_point() + geom_smooth() + labs(title = "Total Steps vs. Calories")
+```
+## Total Minutes Asleep vs. Total Time in Bed
+
+```{r }
+ggplot(data = sleep, mapping = aes(x = TotalMinutesAsleep, y = TotalTimeInBed)) + 
+  geom_point() + labs(title = "Total Minutes Asleep vs. Total Time in Bed")
+```
+
+## Minutes Asleep vs. Sedentary Minutes
+```{r}
+ggplot(data = activity_sleep_data, aes(x = TotalMinutesAsleep, y = SedentaryMinutes)) + 
+  geom_point(color = 'black') + geom_smooth() +
+  labs(title = "Minutes Asleep vs. Sedentary Minutes")
+```
 
